@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Memory Game
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/459f34aff4.js" crossorigin="anonymous"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body style="background-color: darkcyan;" onload="startGame()">
+        <div class="container ">
+            <div class="row mx-auto justify-content-md-center"> 
+                    <div class="col-sm-1  bg-light">
+                        <div class="icon-box  rounded" >
+                            <img id="1" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                        </div>
+                    </div>
+                    <div class="col-sm-1   rounded bg-light">
+                        <div class="icon-box">
+                            <img id="2" src="imgs/joker.png"class="img-fluid box-img" alt="" onclick="showImg(this)">
+                        </div>
+                    </div>
+                    <div class="col-sm-1    rounded bg-light">
+                        <div class="icon-box">
+                            <img id="3" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                        </div>
+                    </div>
+                    <div class="col-sm-1   rounded bg-light">
+                        <div class="icon-box">
+                            <img id="4" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                        </div>
+                    </div>
+            </div>
+            <div class="row mx-auto justify-content-md-center"> 
+                <div class="col-sm-1 bg-light">
+                    <div class="icon-box  rounded" >
+                        <img id="5" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1  rounded bg-light">
+                    <div class="icon-box">
+                        <img id="6" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1  rounded bg-light">
+                    <div class="icon-box">
+                        <img id="7" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1   rounded bg-light">
+                    <div class="icon-box">
+                        <img id="8" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto justify-content-md-center"> 
+                <div class="col-sm-1 bg-light">
+                    <div class="icon-box  rounded" >
+                        <img id="9" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1  rounded bg-light">
+                    <div class="icon-box">
+                        <img id="10" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1   rounded bg-light">
+                    <div class="icon-box">
+                        <img id="11" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1  rounded bg-light">
+                    <div class="icon-box">
+                        <img id="12" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto justify-content-md-center"> 
+                <div class="col-sm-1 bg-light">
+                    <div class="icon-box  rounded" >
+                        <img id="13" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1  rounded bg-light">
+                    <div class="icon-box">
+                        <img id="14" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1 rounded bg-light">
+                    <div class="icon-box">
+                        <img id="15" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+                <div class="col-sm-1   rounded bg-light">
+                    <div class="icon-box">
+                        <img id="0" src="imgs/joker.png" class="img-fluid box-img" alt="" onclick="showImg(this)">
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto justify-content-md-center"> 
+                <div class="col-sm-2 bg-light">
+                    <div class="button-box  rounded ">
+                        <button type="button" class="btn btn-success " onclick="playAgain()">Play Again</button>
+                    </div>
+                </div>
+                <div class="col-sm-2  rounded bg-light ">
+                    <div class="button-box ">
+                        <button type="button" class="btn btn-danger " onclick="quiteGame()">Quite Game</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto justify-content-md-center">
+                <div class="col-sm-4 col-xs-2 rounded bg-light ">
+                    <div class="txt-box mx-auto">
+                        <input type="text" class="btn btn-warning " value="00 : 00" name="time" id="timerTxt" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
